@@ -4,10 +4,6 @@ const app = express()
 const request = require('request');
 const port = 5000
 
-app.get('/', function (req, res) {
-    res.send('hello world')
-  })
-
 app.get('/TemperaturaBucuresti', (req, res) => {
 request('http://api.weatherstack.com/current?access_key=3c8bfd0485a940287d501df2f67394df&query=Bucuresti',
 function(error,response,body) {
@@ -21,5 +17,5 @@ function(error,response,body) {
 
 
 app.listen(process.env.PORT || port, () => {
-  console.log(`Example app listening at http://localhost:${port}`)
+  console.log(`Example app listening at https://calculatorstiintific.herokuapp.com/`)
 })
